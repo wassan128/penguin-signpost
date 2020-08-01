@@ -11,9 +11,9 @@ module.exports = {
   ],
 
   themeConfig: {
-    base: '/weblog/',
+    base: '/penguin-signpost/',
     logo: 'https://pbs.twimg.com/profile_images/1245187472155389952/M_TAmpP5_400x400.jpg',
-    repo: 'wassan128/weblog',
+    repo: 'wassan128/penguin-signpost',
     editLinks: false,
     nav: [
       { text: 'Home', link: '/' },
