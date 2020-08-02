@@ -1,6 +1,7 @@
 const { description } = require('../../package')
 
 module.exports = {
+  base: '/penguin-signpost/',
   title: 'ペンギンの道標',
   description: 'wassan128の技術だったり技術じゃなかったりするブログです',
 
@@ -11,7 +12,6 @@ module.exports = {
   ],
 
   themeConfig: {
-    base: '/penguin-signpost/',
     logo: 'https://pbs.twimg.com/profile_images/1245187472155389952/M_TAmpP5_400x400.jpg',
     repo: 'wassan128/penguin-signpost',
     editLinks: false,
