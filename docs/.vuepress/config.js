@@ -13,10 +13,11 @@ module.exports = {
 
   themeConfig: {
     logo: 'https://pbs.twimg.com/profile_images/1245187472155389952/M_TAmpP5_400x400.jpg',
-    repo: 'wassan128/penguin-signpost',
+    repo: '',
     editLinks: false,
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Archives', link: '/archives/' },
     ],
     sidebar: 'auto',
     sidebarDepth: 6,
