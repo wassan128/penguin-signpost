@@ -1,13 +1,6 @@
+[![Build Status](https://travis-ci.com/wassan128/penguin-signpost.svg?branch=master)](https://travis-ci.com/wassan128/penguin-signpost)
+
 # penguin-signpost 
 
-> 
-
-## Development
-
-```bash
-yarn dev
-yarn build
-```
-
-For more details, please head VuePress's [documentation](https://v1.vuepress.vuejs.org/).
+wassan128のブログです
 
