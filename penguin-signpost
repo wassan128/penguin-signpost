@@ -1,0 +1,69 @@
+#!/usr/bin/env bash
+
+ARCHIVES_DIR='docs/archives'
+
+usage() {
+    echo "Usage: ${0##*/} <command>" >&2
+}
+
+msg-info() {
+    echo "[*] $(cat)"
+}
+
+msg-error() {
+    echo "[Error] $(cat)" >&2
+}
+
+penguin-signpost() {
+    local subcommand="$1"
+
+    case $subcommand in
+
+        'create')
+            local status
+
+            local article_title="$2"
+            local article_description="$3"
+            if [ -z "$article_title" -o -z "$article_description" ]; then
+                msg-error <<< '引数が足りません'
+            fi
+
+            local appname="${0##*/}"
+            local dir="$(basename $(pwd))"
+            if [[ "$appname" != "$dir" ]]; then
+                msg-error <<< "$appname ディレクトリの直下で実行してください"
+                exit 1
+            fi
+
+            local today="$(date +"%Y/%m/%d")"
+            local article_dir="$ARCHIVES_DIR/$today"
+            mkdir -p "$article_dir"
+            status="$?"
+            if [[ "$status" != 0 ]]; then
+                msg-error <<< '記事ディレクトリの作成に失敗しました'
+            fi
+
+            local article="$article_dir/README.md"
+            touch "$article"
+            status="$?"
+            if [[ "$status" != 0 ]]; then
+                msg-error <<< '記事ファイルの作成に失敗しました'
+            fi
+
+            {
+                echo "---"
+                echo "title: $article_title"
+                echo "description: $article_description"
+                echo "---"
+            } > "$article"
+            ;;
+
+        *)
+            usage
+            exit 1
+            ;;
+
+    esac
+}
+
+penguin-signpost "$@"
