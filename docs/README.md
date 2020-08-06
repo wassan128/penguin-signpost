@@ -5,3 +5,5 @@ heroText: ペンギンの道標
 tagline: 技術だったり技術じゃなかったりするブログ
 footer: © 2020-present wassan128
 ---
+
+<Archives />

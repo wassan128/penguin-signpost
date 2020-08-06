@@ -1,4 +1,5 @@
 ---
+date: 2020/08/04
 title: 三代目ブログの話
 description: vuepressを使ってみたかっただけともいう
 ---

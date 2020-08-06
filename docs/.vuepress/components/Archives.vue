@@ -1,8 +1,9 @@
 <template>
   <div>
     <div v-for="archive in archives">
+      <p :class="$style.date">{{ archive.frontmatter.date  }}</p>
       <h2>
-        <router-link v-bind:to="archive.path">{{ archive.title }}</router-link>
+        <router-link v-bind:to="archive.path" :class="$style.title">{{ archive.title }}</router-link>
       </h2>
       <p>{{ archive.frontmatter.description }}</p>
     </div>
@@ -22,3 +23,15 @@ export default {
   },
 }
 </script>
+
+<style module>
+.date {
+    color: #666;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.title {
+    font-weight: bold;
+}
+</style>
