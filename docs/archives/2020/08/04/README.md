@@ -3,8 +3,9 @@ date: 2020/08/04
 title: 三代目ブログの話
 description: vuepressを使ってみたかっただけともいう
 ---
+<span style="font-size: 10pt; font-weight: bold; color: #3297bf">{{ $frontmatter.date }}</span>
 
-# 三代目ブログの話
+# {{ $frontmatter.title }}
 
 どうも、ブログ記事置き場作りがち芸人のwassan128です。またしても新しく作ったのでメモ。
 
