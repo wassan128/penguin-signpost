@@ -27,7 +27,7 @@ export default {
 <style module>
 .box div {
     margin-bottom: 1.5em;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #333;
 }
 .box div:last-child {
     border: none;
