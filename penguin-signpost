@@ -55,10 +55,14 @@ cmd-create() {
     fi
 
     {
-        echo "---"
-        echo "title:"
-        echo "description:"
-        echo "---"
+        echo '---'
+        echo "date: $(date +"%Y/%m/%d")"
+        echo 'title:'
+        echo 'description:'
+        echo '---'
+        echo '<span style="font-size: 10pt; font-weight: bold; color: #3297bf">{{ $frontmatter.date }}</span>'
+        echo
+        echo '# {{ $frontmatter.title }}'
     } > "$article"
 
     echo >&2
