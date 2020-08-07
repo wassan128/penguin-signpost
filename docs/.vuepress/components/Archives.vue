@@ -25,9 +25,6 @@ export default {
 </script>
 
 <style module>
-.box {
-    margin-top: 100px;
-}
 .box div {
     margin-bottom: 1.5em;
     border-bottom: 1px solid #eee;
