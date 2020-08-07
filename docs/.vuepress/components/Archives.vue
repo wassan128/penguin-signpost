@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div :class="$style.box">
     <div v-for="archive in archives">
       <p :class="$style.date">{{ archive.frontmatter.date  }}</p>
-      <h2>
+      <h3>
         <router-link v-bind:to="archive.path" :class="$style.title">{{ archive.title }}</router-link>
-      </h2>
+      </h3>
       <p>{{ archive.frontmatter.description }}</p>
     </div>
   </div>
@@ -25,6 +25,19 @@ export default {
 </script>
 
 <style module>
+.box {
+    margin-top: 100px;
+}
+.box div {
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid #eee;
+}
+.box div:last-child {
+    border: none;
+}
+.box div > * {
+    margin: 0.5em;
+}
 .date {
     color: #666;
     font-size: 10pt;
