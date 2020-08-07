@@ -12,7 +12,7 @@ module.exports = {
   ],
 
   themeConfig: {
-      logo: 'https://avatars1.githubusercontent.com/u/9693997?s=460&u=4ea091df8eef9b61b224c0746f6aed6cd472ca77&v=4',
+    logo: 'https://avatars1.githubusercontent.com/u/9693997?s=460&u=4ea091df8eef9b61b224c0746f6aed6cd472ca77&v=4',
     repo: '',
     editLinks: false,
     nav: [
