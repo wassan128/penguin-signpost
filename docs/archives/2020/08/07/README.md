@@ -23,7 +23,7 @@ $borderColor = #333
 ```
 
 ## docs/.vuepress/styles/index.styl
-上記palette.stylでできる変更はあまり柔軟ではありません。それ以外の細かいことをしたい場合はこのファイルに書けます。詳しくは公式(ry [https://vuepress.vuejs.org/config/#palette-styl](https://vuepress.vuejs.org/config/#palette-styl)
+上記palette.stylでできる変更はあまり柔軟ではありません。それ以外の細かいことをしたい場合はこのファイルに書けます。詳しくは公式(ry [https://vuepress.vuejs.org/config/#index-styl](https://vuepress.vuejs.org/config/#index-styl)
 
 今回はヘッダ/本文/サイドバーを指す要素の `background-color` と、Homeページのサブタイトル `color` を以下の値に設定しました。(追記: 最初 `*` で全要素に対して背景色を変更していましたが、早速code blockの背景が消えてることに気づいて修正しました)
 
