@@ -69,6 +69,19 @@ cmd-create() {
     msg-info <<< "記事ファイルを作成しました: $article"
 }
 
+cmd-tweet() {
+    local today="$(date +"%Y/%m/%d")"
+
+    local title=$(awk '/title:/{
+        sub(/title:\s*/, "");
+        print;
+    }' <<< $(cat "docs/archives/$today/README.md"))
+
+    local url="https://wassan128.github.io/penguin-signpost/archives/$today"
+
+    t --text="かいた/$title $url"
+}
+
 penguin-signpost() {
     local subcommand="$1"
 
@@ -76,6 +89,10 @@ penguin-signpost() {
 
         'create')
             cmd-create
+            ;;
+
+        'tweet')
+            cmd-tweet
             ;;
 
         *)
