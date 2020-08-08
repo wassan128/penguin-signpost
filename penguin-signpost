@@ -32,6 +32,7 @@ cmd-create() {
     status="$?"
     if [[ "$status" != 0 ]]; then
         msg-error <<< '記事ディレクトリの作成に失敗しました'
+        exit 1
     fi
 
     local article="$article_dir/README.md"
@@ -39,6 +40,7 @@ cmd-create() {
     status="$?"
     if [[ "$status" != 0 ]]; then
         msg-error <<< '記事ファイルの作成に失敗しました'
+        exit 1
     fi
 
     if [[ -s "$article" ]]; then
@@ -70,12 +72,23 @@ cmd-create() {
 }
 
 cmd-tweet() {
+    if [[ $(command -v t) != "/usr/local/bin/t" ]]; then
+        msg-error <<< 'tコマンドをgit clone & /usr/local/binにコピーしてください'
+        exit 1
+    fi
+
     local today="$(date +"%Y/%m/%d")"
+    local target_article="docs/archives/$today/README.md"
+
+    if [[ ! -e "$target_article" ]]; then
+        msg-error <<< "記事が存在しません: $target_article"
+        exit 1
+    fi
 
     local title=$(awk '/title:/{
         sub(/title:\s*/, "");
         print;
-    }' <<< $(cat "docs/archives/$today/README.md"))
+    }' <<< $(cat "$target_article"))
 
     local url="https://wassan128.github.io/penguin-signpost/archives/$today"
 
