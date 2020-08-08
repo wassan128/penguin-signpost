@@ -25,7 +25,7 @@ $borderColor = #333
 ## docs/.vuepress/styles/index.styl
 上記palette.stylでできる変更はあまり柔軟ではありません。それ以外の細かいことをしたい場合はこのファイルに書けます。詳しくは公式(ry [https://vuepress.vuejs.org/config/#palette-styl](https://vuepress.vuejs.org/config/#palette-styl)
 
-今回は全要素の `background-color` を以下の値に設定しました。
+今回は全要素の `background-color` と、Homeページのサブタイトル `color` を以下の値に設定しました。
 
 ```stylus
 *
