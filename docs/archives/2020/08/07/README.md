@@ -9,6 +9,9 @@ description: 目に優しくしていきたい作業ログ
 
 タイトル通りの作業ログ。いじったファイルとどういじったかをまとめます。
 
+(追記) よくよく調べると、ちょうど1年ほど前から公式リポジトリのissueで議論されていました [https://github.com/vuejs/vuepress/issues/1865](https://github.com/vuejs/vuepress/issues/1865)。今年の4月にはライト/ダークテーマを切替可能な良い感じのサンプルを実装した人がissue内に現れているので、そのうち取り込まれるのかもしれませんね。
+
+
 ## docs/.vuepress/styles/palette.styl
 デフォルトの色系/幅系を上書きしたり、自分で変数を定義したりできるファイルです。詳しくは公式のpalette.styl項目を参照してください。 [https://vuepress.vuejs.org/config/#palette-styl](https://vuepress.vuejs.org/config/#palette-styl)
 
