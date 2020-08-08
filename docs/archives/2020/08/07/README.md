@@ -25,10 +25,10 @@ $borderColor = #333
 ## docs/.vuepress/styles/index.styl
 上記palette.stylでできる変更はあまり柔軟ではありません。それ以外の細かいことをしたい場合はこのファイルに書けます。詳しくは公式(ry [https://vuepress.vuejs.org/config/#palette-styl](https://vuepress.vuejs.org/config/#palette-styl)
 
-今回は全要素の `background-color` と、Homeページのサブタイトル `color` を以下の値に設定しました。
+今回はヘッダ/本文/サイドバーを指す要素の `background-color` と、Homeページのサブタイトル `color` を以下の値に設定しました。(追記: 最初 `*` で全要素に対して背景色を変更していましたが、早速code blockの背景が消えてることに気づいて修正しました)
 
 ```stylus
-*
+html, body, header, header *, aside
   background-color #18212a!important
 
 .hero .description
@@ -51,7 +51,7 @@ $borderColor = #333
 ### 意図しない要素への影響可能性
 `*` のように、指す範囲が広いセレクタに対して上書きスタイルを当てると意図しない影響が発生する可能性があります。影響が出にくいようにセレクタ及びプロパティの影響を最小限にするなどの工夫が必要になります。
 
-今回の場合、 `*` (全要素)に対して `background-color` を上書きしていますが、例えばこれを `background` として上書きしてしまうと、 `background-image` も上書きされてしまうため、上部にある「検索アイコン」が消失したりします。
+今回の場合、 `header *` に対して `background-color` を上書きしていますが、例えばこれを `background` として上書きしてしまうと、 `background-image` も上書きされてしまうため、上部にある「検索アイコン」が消失したりします。
 
 
 ## おわりに
