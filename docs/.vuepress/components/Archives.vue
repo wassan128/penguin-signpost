@@ -12,13 +12,19 @@
 
 <script>
 export default {
+  props: {
+      maxDisplay: Number
+  },
   computed: {
     archives() {
-      return this.$site.pages
-        .filter((archive) => archive.path.match(/^\/archives\/\d/))
+      const articles = this.$site.pages
+        .filter(archive => archive.path.match(/^\/archives\/\d/))
         .sort((a, b) => (
           new Date(b.frontmatter.date) - new Date(a.frontmatter.date)),
         )
+
+      if (this.maxDisplay === undefined) this.maxDisplay = articles.length
+      return articles.slice(0, this.maxDisplay)
     },
   },
 }

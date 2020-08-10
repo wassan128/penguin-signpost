@@ -6,4 +6,4 @@ tagline: 技術だったりじゃなかったりするブログ
 footer: © 2020-present wassan128
 ---
 
-<Archives />
+<Archives maxDisplay="3"/>
