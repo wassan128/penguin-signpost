@@ -92,6 +92,17 @@ cmd-tweet() {
 
     local url="https://wassan128.github.io/penguin-signpost/archives/$today"
 
+    read -p "ツイートを投稿して問題ないですか?(y/N): " confirm
+    case "$confirm" in
+        [yY]*)
+            ;;
+
+        *)
+            msg-error <<< '処理を中止します'
+            exit 1
+            ;;
+    esac
+
     t --text="かいた/$title $url"
 }
 
