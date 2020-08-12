@@ -26,6 +26,13 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
+    [
+      'vuepress-plugin-seo',
+      {
+        title: $page => $page.title,
+        twitterCard: _ => 'summary',
+        image: (_, $site) => $site.themeConfig.logo,
+      },
+    ]
   ]
 }
-
