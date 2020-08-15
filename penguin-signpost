@@ -7,11 +7,11 @@ usage() {
 }
 
 msg-info() {
-    echo "[*] $(cat)"
+    echo "$(tput setab 4) Info  $(tput sgr0) $(cat)"
 }
 
 msg-error() {
-    echo "[Error] $(cat)" >&2
+    echo "$(tput setab 1) Error $(tput sgr0) $(cat)"
 }
 
 cmd-create() {
