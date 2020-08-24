@@ -15,3 +15,12 @@ $ penguin-signpost create
 
 [*] 記事ファイルを作成しました: docs/archives/2020/08/05/README.md
 ```
+
+記事URLをツイートする場合はtコマンドを先に用意します。tのREADME通りにシークレット系を設定する必要もあります。
+現状"その日"の記事URLしかツイートできないことに注意。
+```
+$ git clone git@github.com:wassan128/t.git
+$ cd t
+$ go build -o t main.go
+$ penguin-signpost tweet
+```
