@@ -22,5 +22,6 @@ $ penguin-signpost create
 $ git clone git@github.com:wassan128/t.git
 $ cd t
 $ go build -o t main.go
+$ sudo ln -s (pwd)/t /usr/local/bin/t
 $ penguin-signpost tweet
 ```
